@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  MRAIDDemo
+
+  Created by Harsha on 10/23/13.
+  Copyright (c) 2013 Nexage. All rights reserved.
+*/
+
+"banner.simple" = "Loads a simple MRAID html creative.";
+
+"banner.fragment" = "Loads a fragment HTML as MRAID content.";
+
+"banner.callTel" = "Makes a callback with the number to be dialed.";
+
+"banner.sendSMS" = "Makes a callback with the number to SMS has to be sent.";
+
+"banner.addEventListener" = "Event listeners added to event 'ready' and 'stateChange'. Alerts will be displayed when MRAID is ready and when there is a stateChange.";
+
+"banner.removeEventListener" = "Load banner and click expand. This will listen to stateChanged event. But once you remove the listener and click on expand, it should not throw the alert for the same.";
+
+"banner.getOrientationProperties" = "The Set Properties button sets the orientation properties to allowOrientationChange : false, forceOrientation : landscape. Use the Expand Button to see the effect.";
+
+"banner.ready" = "The content of the WebView changes from 'Ad is not ready' to 'Ad is in ready state' when the state changes to ready.";
+
+"banner.sizeChange" = "An alert is triggered when the size of the Ad is changed. Use the Expand Button or change the orientation to observe this.";
+
+"banner.stateChange" = "An alert is triggered when the state of the Ad is changed. Use the Expand Button or Resize Button to observe this.";
+
+"banner.useCustomClose" = "Expand the Ad and use the close image provided to exercise mraid.close().";
+
+"banner.removeAllEventListeners" = "Load banner and see two alerts popping up. Click on remove button and expand() again. Make sure that we don't show any alerts for the state changed into expanded.";
+
+"banner.getExpandProperties" = "Click on 'Expand Banner' to exercise setExpandProperties with no Custom Close button. Click 'Custom Close' to close the expanded banner using an image. Click 'Get Properties' to get the width and height properties.";
+
+"banner.setExpandProperties" = "Click on 'Expand Banner' to exercise setExpandProperties with no Custom Close button. Click 'Get Properties' to get the expand properties.";
+
+"banner.viewableChange" = "viewableChange Event is triggered by a change in the application's view controller when MRAID view becomes visible or goes off the screen. Enter or exit the page to exercise this.";
+
+"banner.getStates" = "The Ad displays the current state obtained from 'stateChange' event listener and the state obtained from mraid.getState(). Use the Expand button to see the state change.";
+
+"banner.open" = "The Open function opens the given url in the default browser. Click on Test Open() to see the behavior.";

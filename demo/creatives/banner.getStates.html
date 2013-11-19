@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta name='viewport' content='user-scalable=no initial-scale=1.0' />
+        
+        <script src="mraid.js"></script>
+        
+        <script type="text/javascript">
+            
+            function handleStateChange(state) {
+                var stateDiv = document.getElementById('state');
+                stateDiv.innerHTML = "stateChange event: " + state + "; from mraid.getState(): " + mraid.getState();
+            }
+        
+            mraid.addEventListener("stateChange", handleStateChange);
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        <div id='state' style="font-size:12px;">&nbsp;</div>
+        <button type='button' onclick='mraid.expand();'>Expand</button>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        
+        <!-- Setup Javascript -->
+        <script language="javascript">
+            
+            mraid.addEventListener("error", handleErrorEvent);
+            
+            function handleErrorEvent(message, action) {
+                var msg = "MRAID ERROR";
+                if (action != null) {
+                    msg += " caused by action '" + action + "',";
+                }
+                msg += " message: " + message;
+                console.log(msg);
+            }
+        
+        function clicked() {
+            if (mraid.supports("storePicture")) {
+                mraid.storePicture("http://blog.idevaffiliate.com/wp-content/uploads/2013/08/coupon-graphic.gif");
+            }
+        }
+        
+            </script>
+    </head>
+    
+    <body>
+        <button style="height:30px;width:60px;position:absolute;" onclick="clicked()">Save Picture</button>
+        <div id="top" style="visibility:visible">
+            <img src="http://blog.idevaffiliate.com/wp-content/uploads/2013/08/coupon-graphic.gif" />
+        </div>
+        
+    </body>
+</html>

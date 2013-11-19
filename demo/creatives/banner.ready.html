@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script type="text/javascript">
+            
+            mraid.addEventListener("ready", handleReadyState);
+            function handleReadyState()
+            {
+                var ad = document.getElementById('statelist');
+                ad.innerHTML = "Ad is in ready state";
+            }
+        
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;" style="font-size:6px;">
+        Test for MRAID ready state.
+        <br/>
+        <div id="statelist">
+            Ad not ready
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script type="text/javascript">
+            
+            mraid.addEventListener("stateChange", handleStateChange);
+            
+            function handleStateChange(state)
+            {
+                alert('State changed to : ' + state);
+            }
+        
+            function handleError(message, action) {
+                alert("Error " + message + " caused by " + action);
+            }
+        
+            mraid.addEventListener("error", handleError);
+        
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;" style="font-size:6px;">
+        <button type='button' onclick='mraid.expand();'>Expand</button>
+        <button type='button' onclick='mraid.resize();'>Resize</button>
+    </body>
+</html>

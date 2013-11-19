@@ -1,0 +1,18 @@
+<html>
+	<head>
+        <script type="mraid.js"></script>
+        
+        <script type="text/javascript">
+            mraid.addEventListener('stateChange', handleStateChanged);
+            function handleStateChanged(state) {
+                alert('current state: ' + state);
+            }
+        </script>
+	</head>
+	<body align='center' style="background-color:silver;">
+        Test MRAID close<br/>
+        <button type='button' id='expandButton' onclick='mraid.expand();'>Expand</button>
+        <br>
+        <button type='button' id='closeButton' onclick='mraid.close();'>Close</button>
+    </body>
+</html>

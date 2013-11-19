@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script>
+            
+            mraid.addEventListener("ready", handleReady);
+            
+            function handleReady() {
+                var ver = document.getElementById('ver');
+                ver.innerHTML = mraid.getVersion();
+            }
+
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        Current MRAID Version <div id="ver">&nbsp;</div><br/>
+    </body>
+</html>

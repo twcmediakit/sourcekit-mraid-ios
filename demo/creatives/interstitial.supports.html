@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script>
+            mraid.addEventListener("ready", adReady);
+            
+            function adReady() {
+                var ad = document.getElementById('all');
+                ad.innerHTML = "sms: " + mraid.supports("sms") + "<br/>";
+                ad.innerHTML = ad.innerHTML + "tel: " + mraid.supports("tel") + "<br/>";
+                ad.innerHTML = ad.innerHTML + "calendar: " + mraid.supports("calendar") + "<br/>";
+                ad.innerHTML = ad.innerHTML + "storePicture: " + mraid.supports("storePicture") + "<br/>";
+                ad.innerHTML = ad.innerHTML + "inlineVideo: " + mraid.supports("inlineVideo") + "<br/>";
+            }
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        List of supports
+        <br/>
+        <br/>
+        <div id="all">None</div>
+    </body>
+</html>

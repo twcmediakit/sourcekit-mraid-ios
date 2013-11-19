@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script language="javascript">
+            
+            if (mraid.getState() === 'loading') {
+                mraid.addEventListener('stateChange', handleStateChanged);
+                mraid.addEventListener('ready', showMyAd);
+                mraid.addEventListener('error', handleError);
+            } else {
+                showMyAd();
+            }
+        
+        function showMyAd() {
+            //                console.log('hello world');
+            alert('ready');
+        }
+        
+        function handleError(message, source) {
+            // code to handle errors
+        }
+        
+        function handleStateChanged() {
+            alert('current state: ' + mraid.getState());
+        }
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        Test MRAID addEventListener
+    </body>
+</html>

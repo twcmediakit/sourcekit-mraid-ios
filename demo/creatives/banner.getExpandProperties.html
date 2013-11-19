@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script language="javascript">
+            
+        mraid.addEventListener(mraid.EVENTS.READY, handleReady);
+            
+        function handleReady(state)
+            {
+                var state = mraid.getState();
+                if (state == "default") {
+                    setButtonVisible(false);
+                } else {
+                    setButtonVisible(true);
+                }
+            }
+        
+        function setExpandProperties() {
+            
+            var expandProperties = {
+                "width" : 320,
+                "height" : 480,
+                "useCustomClose" : false,
+                "isModal" : false
+            };
+            mraid.setExpandProperties(expandProperties);
+            mraid.expand();
+            setButtonVisible(false);
+            
+        }
+        
+        function setExpandProperties2() {
+            
+            var expandProperties = {
+                "width" : 320,
+                "height" : 480,
+                "useCustomClose" : true,
+                "isModal" : false
+            };
+            mraid.setExpandProperties(expandProperties);
+            mraid.expand();
+            setButtonVisible(true);
+            
+        }
+
+       function getExpandProperties(){
+            var getProperties = mraid.getExpandProperties();
+            alert(getProperties.width + ", " + getProperties.height + " ," + getProperties.useCustomClose + " and " + getProperties.isModal);
+        }
+        
+        function setButtonVisible(visible) {
+            
+            var button = document.getElementById("closeButton");
+            button.style.visibility = (visible ? 'visible' : 'hidden');
+        }
+
+        </script>
+    </head>
+    <body align='center' style="background-color:#FF6600;">
+        
+        <button style="height:30px;width:60px;"  type='button' onclick='setExpandProperties();'>Expand Banner</button>
+        <button style="height:30px;width:60px;"  type='button' onclick='setExpandProperties2();'>Custom Close True</button>
+        <button style="height:30px;width:90px;" type='button' onclick='getExpandProperties();'>Get Properties</button>
+        
+        <a onclick="mraid.close();">
+            <img id="closeButton" src="close.png" width="50" style="position:absolute;left:10px;bottom:100px;"/>
+        </a>
+        
+    </body>
+</html>

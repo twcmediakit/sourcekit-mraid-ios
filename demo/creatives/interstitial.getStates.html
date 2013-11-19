@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta name='viewport' content='user-scalable=no initial-scale=1.0' />
+        <script src="mraid.js"></script>
+    </head>
+    <body>
+        <div id='ad' class='default' onclick='mraid.expand()'>
+            Intestitial getState() Test
+        </div>
+        <br/>
+        <h2 id="current"></h2>
+        
+        <script type="text/javascript">
+            
+            var handleStateChange = function() {
+                console.log("mraid state: " + mraid.getState());
+                var ad = document.getElementById('current');
+                ad.innerHTML = "Current state: " + mraid.getState();
+            }
+        
+            mraid.addEventListener("stateChange", handleStateChange);
+        
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script language="javascript">
+            
+            function setExpandProperties() {
+                
+                var expandProperties = {
+                    "width" : 320,
+                    "height" : 480,
+                    "useCustomClose" : false,
+                    "isModal" : false
+                };
+                mraid.setExpandProperties(expandProperties);
+                mraid.expand();
+                
+            }
+        
+        function getExpandProperties(){
+            var getProperties = mraid.getExpandProperties();
+            alert(getProperties.width + ", " + getProperties.height + " ," + getProperties.useCustomClose + " and " + getProperties.isModal);
+            
+            
+        }
+        
+            </script>
+    </head>
+    <body align='center' style="background-color:#FF6600;">
+        
+        <button style="height:30px;width:90px;"  type='button' onclick='setExpandProperties();'>Set Properties</button>
+        <button style="height:30px;width:90px;" type='button' onclick='getExpandProperties();'>Get Properties</button>
+        
+    </body>
+</html>

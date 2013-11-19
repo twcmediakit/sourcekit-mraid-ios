@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='user-scalable=no initial-scale=1.0' />
+        <script src="mraid.js"></script>
+        <style type="text/css">
+            
+        html,body {
+            height: 100%;
+        }
+        
+        div {
+            width: 100%;
+            min-height: 100%;
+        }
+        
+        #banner {
+            background-color: #FF6600;
+        }
+        
+        #fullscreen {
+            background-color: blue; padding-top: 25px;
+        }
+        
+        .lockbutton, .lockbutton-active {
+            margin-top: 25px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            vertical-align: middle;
+            font-size: x-large;
+        }
+        
+        .lockbutton {
+            background-color: yellow;
+        }
+        
+        .lockbutton-active {
+            background-color: orange;
+        }
+        
+            </style>
+    </head>
+    
+    <body>
+        
+        <div id="fullscreen">
+            <div id="lock-off-button" class="lockbutton-active" onclick="lockOff()">Lock off</div>
+            <div id="lock-current-button" class="lockbutton" onclick="lockCurrent()">Lock current</div>
+            <div id="lock-portrait-button" class="lockbutton" onclick="lockPortrait()">Lock portrait</div>
+            <div id="lock-landscape-button" class="lockbutton" onclick="lockLandscape()">Lock landscape</div>
+        </div>
+        
+        <script>
+            
+            console.log("JS script loaded");
+            
+            document.getElementById("banner").style.display = "block";
+            document.getElementById("fullscreen").style.display = "none";
+            
+            var stateChangeHandler = function(state) {
+                if (state == mraid.STATES.DEFAULT) {
+                    document.getElementById("banner").style.display = "none";
+                    document.getElementById("fullscreen").style.display = "block";
+                }
+            }
+        
+        function lockOff() {
+            document.getElementById("lock-off-button").setAttribute("class", "lockbutton-active");
+            document.getElementById("lock-current-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-portrait-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-landscape-button").setAttribute("class", "lockbutton");
+            mraid.setOrientationProperties({
+                                           allowOrientationChange: true,
+                                           forceOrientation: mraid.ORIENTATION_PROPERTIES_FORCE_ORIENTATION.NONE
+                                           });
+        }
+        
+        function lockCurrent() {
+            document.getElementById("lock-off-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-current-button").setAttribute("class", "lockbutton-active");
+            document.getElementById("lock-portrait-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-landscape-button").setAttribute("class", "lockbutton");
+            mraid.setOrientationProperties({
+                                           allowOrientationChange: false,
+                                           forceOrientation: mraid.ORIENTATION_PROPERTIES_FORCE_ORIENTATION.NONE
+                                           });
+        }
+        
+        function lockPortrait() {
+            document.getElementById("lock-off-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-current-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-portrait-button").setAttribute("class", "lockbutton-active");
+            document.getElementById("lock-landscape-button").setAttribute("class", "lockbutton");
+            mraid.setOrientationProperties({
+                                           allowOrientationChange: false,
+                                           forceOrientation: mraid.ORIENTATION_PROPERTIES_FORCE_ORIENTATION.PORTRAIT
+                                           });
+        }
+        
+        function lockLandscape() {
+            document.getElementById("lock-off-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-current-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-portrait-button").setAttribute("class", "lockbutton");
+            document.getElementById("lock-landscape-button").setAttribute("class", "lockbutton-active");
+            mraid.setOrientationProperties({
+                                           allowOrientationChange: false,
+                                           forceOrientation: mraid.ORIENTATION_PROPERTIES_FORCE_ORIENTATION.LANDSCAPE
+                                           });
+        }
+        
+        
+        mraid.addEventListener(mraid.EVENTS.STATECHANGE, stateChangeHandler);
+        
+            </script>
+    </body>
+</html>

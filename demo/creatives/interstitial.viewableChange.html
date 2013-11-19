@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script type="text/javascript">
+            
+            mraid.addEventListener("viewableChange", handleViewableChange);
+            
+            function handleViewableChange()
+            {
+                console.log('Viewable changed to : ' + mraid.isViewable());
+            }
+        </script>
+        
+        <script>
+            var console = {};
+            console.log = function(msg) {
+                msg = "(CREATIVE) " + msg;
+                var iframe = document.createElement("IFRAME");
+                iframe.setAttribute("src", "console-log://" + msg);
+                document.documentElement.appendChild(iframe);
+                iframe.parentNode.removeChild(iframe);
+                iframe = null;
+            };
+        </script>
+        
+    </head>
+    
+    <body align='center' style="background-color:silver;" style="font-size:6px;">
+        Test MRAID viewableChange Event Listener
+    </body>
+    
+    
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script>
+            mraid.addEventListener('stateChange', handleStateChanged);
+            function handleStateChanged() {
+                if (mraid.getState() == "default") {
+                    mraid.useCustomClose(true);
+                }
+            }
+        </script>
+    </head>
+    <body align='center'>
+        <h2>Interstitial Custom Close Demo</h2>
+        <div style="float:left; padding:2px;" onclick="mraid.close()"><img src="close.png" width="50"/></div>
+        <div style="float:right; padding:2px;" onclick="mraid.close()"><img src="close.png" width="50"/></div>
+    </body>
+</html>

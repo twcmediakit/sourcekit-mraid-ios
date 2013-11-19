@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script language="javascript">
+            
+            function setOrientationProperties() {
+                
+                var orientationProperties = {
+                    "allowOrientationChange" : false,
+                    "forceOrientation" : "landscape"
+                };
+                mraid.setOrientationProperties(orientationProperties);
+                
+            }
+        
+            function getOrientationProperties(){
+                var orientationProperties = mraid.getOrientationProperties();
+                alert('orientationChange: ' + orientationProperties.allowOrientationChange + ", force:" + orientationProperties.forceOrientation);
+            
+            
+            }
+        
+            function addOrientationProperties(state) {
+                
+                if(state == "expanded") {
+                    var orientationProperties = mraid.getOrientationProperties();
+                    var props = document.getElementById("props");
+                
+                    props.innerHTML = "<br/>" + "Orientation Properties:" + "<br/>" + "allowOrientationChange:" +
+                    orientationProperties.allowOrientationChange + "<br/>" + "forceOrientation:" +
+                    orientationProperties.forceOrientation;
+                }
+            }
+        
+            mraid.addEventListener("stateChange", addOrientationProperties);
+
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;" style="font-size:6px;">
+        
+        <button type='button' onclick='setOrientationProperties();'>Set Properties</button>
+        <button type='button' onclick='getOrientationProperties();'>Get Properties</button>
+        <button type='button' onclick='mraid.expand();'>Expand</button>
+        <div id="props">&nbsp;</div>
+        
+    </body>
+</html>

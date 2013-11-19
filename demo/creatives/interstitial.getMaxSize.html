@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        Hello MRAID<br/>
+        <button type='button' onclick=clicked()>Get MaxSize</button>
+        
+        <script>
+            function clicked() {
+                var v = mraid.getMaxSize();
+                alert('printing max size ' + v.width + ' x ' + v.height);
+            }
+        </script>
+        
+    </body>
+</html>

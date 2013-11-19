@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script type="text/javascript">
+    
+            mraid.addEventListener("sizeChange", handleSizeChange);
+
+            function handleSizeChange(w, h)
+            {
+                alert('Got size change as width: ' + w + ' and height:' + h);
+            }
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;" style="font-size:6px;">
+        Click Expand to trigger size change
+        <button type='button' onclick='mraid.expand();'>Expand</button>
+    </body>
+</html>

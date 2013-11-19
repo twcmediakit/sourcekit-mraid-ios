@@ -1,0 +1,882 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2720898D1835172800394F9D /* MRAIDView.h in Resources */ = {isa = PBXBuildFile; fileRef = 2720898A1835172800394F9D /* MRAIDView.h */; };
+		2720898E1835172800394F9D /* MRAIDInterstitial.h in Resources */ = {isa = PBXBuildFile; fileRef = 2720898B1835172800394F9D /* MRAIDInterstitial.h */; };
+		2720898F1835172800394F9D /* MRAIDServiceDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = 2720898C1835172800394F9D /* MRAIDServiceDelegate.h */; };
+		27740FEB17F2891C00EFFF39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27740FEA17F2891C00EFFF39 /* Foundation.framework */; };
+		27740FED17F2891C00EFFF39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27740FEC17F2891C00EFFF39 /* CoreGraphics.framework */; };
+		27740FEF17F2891C00EFFF39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27740FEE17F2891C00EFFF39 /* UIKit.framework */; };
+		27A462AD1815B38E008F7A5A /* libMRAID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278E62ED1805AB4900A786B4 /* libMRAID.a */; };
+		27B9558B183435C90076286F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B9558A183435C90076286F /* AppDelegate.m */; };
+		27B95594183435F60076286F /* BannerAdListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B95591183435F60076286F /* BannerAdListTVC.m */; };
+		27B95595183435F60076286F /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B95593183435F60076286F /* BannerViewController.m */; };
+		27B9559A183436030076286F /* InterstitialAdListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B95597183436030076286F /* InterstitialAdListTVC.m */; };
+		27B9559B183436030076286F /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B95599183436030076286F /* InterstitialViewController.m */; };
+		27B9559E1834360F0076286F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B9559D1834360F0076286F /* AboutViewController.m */; };
+		27B955A01834361D0076286F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B9559F1834361D0076286F /* Localizable.strings */; };
+		27B955A41834362A0076286F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B955A11834362A0076286F /* Main.storyboard */; };
+		27B955B1183436410076286F /* seal.gif in Resources */ = {isa = PBXBuildFile; fileRef = 27B955A6183436410076286F /* seal.gif */; };
+		27B955B2183436410076286F /* nexage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27B955A7183436410076286F /* nexage.jpg */; };
+		27B955B3183436410076286F /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955A8183436410076286F /* about.png */; };
+		27B955B4183436410076286F /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955A9183436410076286F /* banner.png */; };
+		27B955B5183436410076286F /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955AA183436410076286F /* button.png */; };
+		27B955B6183436410076286F /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955AB183436410076286F /* Default-568h.png */; };
+		27B955B7183436410076286F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955AC183436410076286F /* Default.png */; };
+		27B955B8183436410076286F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955AD183436410076286F /* Default@2x.png */; };
+		27B955B9183436410076286F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955AE183436410076286F /* icon.png */; };
+		27B955BA183436410076286F /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955AF183436410076286F /* icon@2x.png */; };
+		27B955BB183436410076286F /* interstitials.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B955B0183436410076286F /* interstitials.png */; };
+		27B955BD1834364C0076286F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B955BC1834364C0076286F /* main.m */; };
+		27B9573D183437820076286F /* banner.addEventListener.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F1183437820076286F /* banner.addEventListener.html */; };
+		27B9573E183437820076286F /* banner.callTel.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F2183437820076286F /* banner.callTel.html */; };
+		27B9573F183437820076286F /* banner.close.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F3183437820076286F /* banner.close.html */; };
+		27B95740183437820076286F /* banner.createCalendarEvent.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F4183437820076286F /* banner.createCalendarEvent.html */; };
+		27B95741183437820076286F /* banner.error.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F5183437820076286F /* banner.error.html */; };
+		27B95742183437820076286F /* banner.expand.1-part.fullHtml.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F6183437820076286F /* banner.expand.1-part.fullHtml.html */; };
+		27B95743183437820076286F /* banner.expand.1-part.partialHtml.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F7183437820076286F /* banner.expand.1-part.partialHtml.html */; };
+		27B95744183437820076286F /* banner.expand.2-part.part1.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F8183437820076286F /* banner.expand.2-part.part1.html */; };
+		27B95745183437820076286F /* banner.expand.2-part.part2.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956F9183437820076286F /* banner.expand.2-part.part2.html */; };
+		27B95746183437820076286F /* banner.fragment.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956FA183437820076286F /* banner.fragment.html */; };
+		27B95747183437820076286F /* banner.getCurrentPosition.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956FB183437820076286F /* banner.getCurrentPosition.html */; };
+		27B95748183437820076286F /* banner.getDefaultPosition.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956FC183437820076286F /* banner.getDefaultPosition.html */; };
+		27B95749183437820076286F /* banner.getExpandProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956FD183437820076286F /* banner.getExpandProperties.html */; };
+		27B9574A183437820076286F /* banner.getMaxSize.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956FE183437820076286F /* banner.getMaxSize.html */; };
+		27B9574B183437820076286F /* banner.getOrientationProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B956FF183437820076286F /* banner.getOrientationProperties.html */; };
+		27B9574C183437820076286F /* banner.getPlacementType.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95700183437820076286F /* banner.getPlacementType.html */; };
+		27B9574D183437820076286F /* banner.getResizeProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95701183437820076286F /* banner.getResizeProperties.html */; };
+		27B9574E183437820076286F /* banner.getScreenSize.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95702183437820076286F /* banner.getScreenSize.html */; };
+		27B9574F183437820076286F /* banner.getStates.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95703183437820076286F /* banner.getStates.html */; };
+		27B95750183437820076286F /* banner.getStatesResize.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95704183437820076286F /* banner.getStatesResize.html */; };
+		27B95751183437820076286F /* banner.getVersion.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95705183437820076286F /* banner.getVersion.html */; };
+		27B95752183437820076286F /* banner.isViewable.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95706183437820076286F /* banner.isViewable.html */; };
+		27B95753183437820076286F /* banner.noMraidJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95707183437820076286F /* banner.noMraidJS.html */; };
+		27B95754183437820076286F /* banner.noMraidJSFrag.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95708183437820076286F /* banner.noMraidJSFrag.html */; };
+		27B95755183437820076286F /* banner.open.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95709183437820076286F /* banner.open.html */; };
+		27B95756183437820076286F /* banner.playInlineVideo.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9570A183437820076286F /* banner.playInlineVideo.html */; };
+		27B95757183437820076286F /* banner.playVideo.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9570B183437820076286F /* banner.playVideo.html */; };
+		27B95758183437820076286F /* banner.ready.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9570C183437820076286F /* banner.ready.html */; };
+		27B95759183437820076286F /* banner.removeAllEventListeners.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9570D183437820076286F /* banner.removeAllEventListeners.html */; };
+		27B9575A183437820076286F /* banner.removeEventListener.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9570E183437820076286F /* banner.removeEventListener.html */; };
+		27B9575B183437820076286F /* banner.resize.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9570F183437820076286F /* banner.resize.html */; };
+		27B9575C183437820076286F /* banner.resizeExpand.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95710183437820076286F /* banner.resizeExpand.html */; };
+		27B9575D183437820076286F /* banner.sendSMS.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95711183437820076286F /* banner.sendSMS.html */; };
+		27B9575E183437820076286F /* banner.setExpandProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95712183437820076286F /* banner.setExpandProperties.html */; };
+		27B9575F183437820076286F /* banner.setExpandPropertiesInvalid.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95713183437820076286F /* banner.setExpandPropertiesInvalid.html */; };
+		27B95760183437820076286F /* banner.setOrientationProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95714183437820076286F /* banner.setOrientationProperties.html */; };
+		27B95761183437820076286F /* banner.setResizeProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95715183437820076286F /* banner.setResizeProperties.html */; };
+		27B95762183437820076286F /* banner.simple.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95716183437820076286F /* banner.simple.html */; };
+		27B95763183437820076286F /* banner.sizeChange.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95717183437820076286F /* banner.sizeChange.html */; };
+		27B95764183437820076286F /* banner.stateChange.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95718183437820076286F /* banner.stateChange.html */; };
+		27B95765183437820076286F /* banner.storePicture.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95719183437820076286F /* banner.storePicture.html */; };
+		27B95766183437820076286F /* banner.supports.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9571A183437820076286F /* banner.supports.html */; };
+		27B95767183437820076286F /* banner.useCustomClose.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9571B183437820076286F /* banner.useCustomClose.html */; };
+		27B95768183437820076286F /* banner.viewableChange.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9571C183437820076286F /* banner.viewableChange.html */; };
+		27B95769183437820076286F /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B9571D183437820076286F /* close.png */; };
+		27B9576A183437820076286F /* interstitial.addEventListener.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9571E183437820076286F /* interstitial.addEventListener.html */; };
+		27B9576B183437820076286F /* interstitial.close.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9571F183437820076286F /* interstitial.close.html */; };
+		27B9576C183437820076286F /* interstitial.createCalendarEvent.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95720183437820076286F /* interstitial.createCalendarEvent.html */; };
+		27B9576D183437820076286F /* interstitial.error.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95721183437820076286F /* interstitial.error.html */; };
+		27B9576E183437820076286F /* interstitial.fragment.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95722183437820076286F /* interstitial.fragment.html */; };
+		27B9576F183437820076286F /* interstitial.getCurrentPosition.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95723183437820076286F /* interstitial.getCurrentPosition.html */; };
+		27B95770183437820076286F /* interstitial.getDefaultPosition.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95724183437820076286F /* interstitial.getDefaultPosition.html */; };
+		27B95771183437820076286F /* interstitial.getMaxSize.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95725183437820076286F /* interstitial.getMaxSize.html */; };
+		27B95772183437820076286F /* interstitial.getOrientationProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95726183437820076286F /* interstitial.getOrientationProperties.html */; };
+		27B95773183437820076286F /* interstitial.getScreenSize.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95727183437820076286F /* interstitial.getScreenSize.html */; };
+		27B95774183437820076286F /* interstitial.getStates.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95728183437820076286F /* interstitial.getStates.html */; };
+		27B95775183437820076286F /* interstitial.getVersion.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95729183437820076286F /* interstitial.getVersion.html */; };
+		27B95776183437820076286F /* interstitial.isViewable.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9572A183437820076286F /* interstitial.isViewable.html */; };
+		27B95777183437820076286F /* interstitial.noMraidJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9572B183437820076286F /* interstitial.noMraidJS.html */; };
+		27B95778183437820076286F /* interstitial.noMraidJSFrag.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9572C183437820076286F /* interstitial.noMraidJSFrag.html */; };
+		27B95779183437820076286F /* interstitial.open.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9572D183437820076286F /* interstitial.open.html */; };
+		27B9577A183437820076286F /* interstitial.playInlineVideo.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9572E183437820076286F /* interstitial.playInlineVideo.html */; };
+		27B9577B183437820076286F /* interstitial.playVideo.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9572F183437820076286F /* interstitial.playVideo.html */; };
+		27B9577C183437820076286F /* interstitial.ready.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95730183437820076286F /* interstitial.ready.html */; };
+		27B9577D183437820076286F /* interstitial.removeEventListener.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95731183437820076286F /* interstitial.removeEventListener.html */; };
+		27B9577E183437820076286F /* interstitial.setExpandPropertiesInvalid.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95732183437820076286F /* interstitial.setExpandPropertiesInvalid.html */; };
+		27B9577F183437820076286F /* interstitial.setOrientationProperties.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95733183437820076286F /* interstitial.setOrientationProperties.html */; };
+		27B95780183437820076286F /* interstitial.simple.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95734183437820076286F /* interstitial.simple.html */; };
+		27B95781183437820076286F /* interstitial.sizeChange.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95735183437820076286F /* interstitial.sizeChange.html */; };
+		27B95782183437820076286F /* interstitial.stateChange.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95736183437820076286F /* interstitial.stateChange.html */; };
+		27B95783183437820076286F /* interstitial.storePicture.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95737183437820076286F /* interstitial.storePicture.html */; };
+		27B95784183437820076286F /* interstitial.supports.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95738183437820076286F /* interstitial.supports.html */; };
+		27B95785183437820076286F /* interstitial.telsms.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B95739183437820076286F /* interstitial.telsms.html */; };
+		27B95786183437820076286F /* interstitial.useCustomClose.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9573A183437820076286F /* interstitial.useCustomClose.html */; };
+		27B95787183437820076286F /* interstitial.viewableChange.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B9573B183437820076286F /* interstitial.viewableChange.html */; };
+		27B95788183437820076286F /* nexage.gif in Resources */ = {isa = PBXBuildFile; fileRef = 27B9573C183437820076286F /* nexage.gif */; };
+		953FF054183AB43300E146D2 /* libSourceKitCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 953FF050183AB2E200E146D2 /* libSourceKitCommon.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		278E62EC1805AB4900A786B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278E62E61805AB4900A786B4 /* MRAID.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27296B8F17F280CE004C268F;
+			remoteInfo = MRAID;
+		};
+		27A462AB1815B38A008F7A5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278E62E61805AB4900A786B4 /* MRAID.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 27296B8E17F280CE004C268F;
+			remoteInfo = MRAID;
+		};
+		27BBC1781833E9ED00074066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278E62E61805AB4900A786B4 /* MRAID.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27BBC1621833E99900074066;
+			remoteInfo = "MRAID Tests";
+		};
+		953FF04F183AB2E200E146D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 953FF04B183AB2E200E146D2 /* SourceKitCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2750AD631832BBF9005E1EE0;
+			remoteInfo = SourceKitCommon;
+		};
+		953FF052183AB42600E146D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 953FF04B183AB2E200E146D2 /* SourceKitCommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2750AD621832BBF9005E1EE0;
+			remoteInfo = SourceKitCommon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2720898A1835172800394F9D /* MRAIDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAIDView.h; path = "../../../src/sourcekit-mraid-ios/MRAIDView.h"; sourceTree = "<group>"; };
+		2720898B1835172800394F9D /* MRAIDInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAIDInterstitial.h; path = "../../../src/sourcekit-mraid-ios/MRAIDInterstitial.h"; sourceTree = "<group>"; };
+		2720898C1835172800394F9D /* MRAIDServiceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRAIDServiceDelegate.h; path = "../../../src/sourcekit-mraid-ios/MRAIDServiceDelegate.h"; sourceTree = "<group>"; };
+		27740FE717F2891C00EFFF39 /* MRAIDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRAIDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27740FEA17F2891C00EFFF39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27740FEC17F2891C00EFFF39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27740FEE17F2891C00EFFF39 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		278E62E61805AB4900A786B4 /* MRAID.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MRAID.xcodeproj; path = ../../src/MRAID.xcodeproj; sourceTree = "<group>"; };
+		27B95589183435C90076286F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MRAIDDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		27B9558A183435C90076286F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MRAIDDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		27B95590183435F60076286F /* BannerAdListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BannerAdListTVC.h; path = MRAIDDemo/BannerAdListTVC.h; sourceTree = SOURCE_ROOT; };
+		27B95591183435F60076286F /* BannerAdListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BannerAdListTVC.m; path = MRAIDDemo/BannerAdListTVC.m; sourceTree = SOURCE_ROOT; };
+		27B95592183435F60076286F /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BannerViewController.h; path = MRAIDDemo/BannerViewController.h; sourceTree = SOURCE_ROOT; };
+		27B95593183435F60076286F /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BannerViewController.m; path = MRAIDDemo/BannerViewController.m; sourceTree = SOURCE_ROOT; };
+		27B95596183436030076286F /* InterstitialAdListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterstitialAdListTVC.h; path = MRAIDDemo/InterstitialAdListTVC.h; sourceTree = SOURCE_ROOT; };
+		27B95597183436030076286F /* InterstitialAdListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterstitialAdListTVC.m; path = MRAIDDemo/InterstitialAdListTVC.m; sourceTree = SOURCE_ROOT; };
+		27B95598183436030076286F /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterstitialViewController.h; path = MRAIDDemo/InterstitialViewController.h; sourceTree = SOURCE_ROOT; };
+		27B95599183436030076286F /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterstitialViewController.m; path = MRAIDDemo/InterstitialViewController.m; sourceTree = SOURCE_ROOT; };
+		27B9559C1834360F0076286F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = MRAIDDemo/AboutViewController.h; sourceTree = SOURCE_ROOT; };
+		27B9559D1834360F0076286F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = MRAIDDemo/AboutViewController.m; sourceTree = SOURCE_ROOT; };
+		27B9559F1834361D0076286F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = MRAIDDemo/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		27B955A11834362A0076286F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MRAIDDemo/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		27B955A21834362A0076286F /* MRAIDDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MRAIDDemo-Prefix.pch"; path = "MRAIDDemo/MRAIDDemo-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		27B955A31834362A0076286F /* MRAIDDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MRAIDDemo-Info.plist"; path = "MRAIDDemo/MRAIDDemo-Info.plist"; sourceTree = SOURCE_ROOT; };
+		27B955A6183436410076286F /* seal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = seal.gif; path = MRAIDDemo/seal.gif; sourceTree = SOURCE_ROOT; };
+		27B955A7183436410076286F /* nexage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nexage.jpg; path = MRAIDDemo/nexage.jpg; sourceTree = SOURCE_ROOT; };
+		27B955A8183436410076286F /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = MRAIDDemo/about.png; sourceTree = SOURCE_ROOT; };
+		27B955A9183436410076286F /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banner.png; path = MRAIDDemo/banner.png; sourceTree = SOURCE_ROOT; };
+		27B955AA183436410076286F /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = MRAIDDemo/button.png; sourceTree = SOURCE_ROOT; };
+		27B955AB183436410076286F /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h.png"; path = "MRAIDDemo/Default-568h.png"; sourceTree = SOURCE_ROOT; };
+		27B955AC183436410076286F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = MRAIDDemo/Default.png; sourceTree = SOURCE_ROOT; };
+		27B955AD183436410076286F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "MRAIDDemo/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		27B955AE183436410076286F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = MRAIDDemo/icon.png; sourceTree = SOURCE_ROOT; };
+		27B955AF183436410076286F /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "MRAIDDemo/icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		27B955B0183436410076286F /* interstitials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = interstitials.png; path = MRAIDDemo/interstitials.png; sourceTree = SOURCE_ROOT; };
+		27B955BC1834364C0076286F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MRAIDDemo/main.m; sourceTree = SOURCE_ROOT; };
+		27B956F1183437820076286F /* banner.addEventListener.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.addEventListener.html; sourceTree = "<group>"; };
+		27B956F2183437820076286F /* banner.callTel.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.callTel.html; sourceTree = "<group>"; };
+		27B956F3183437820076286F /* banner.close.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.close.html; sourceTree = "<group>"; };
+		27B956F4183437820076286F /* banner.createCalendarEvent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.createCalendarEvent.html; sourceTree = "<group>"; };
+		27B956F5183437820076286F /* banner.error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.error.html; sourceTree = "<group>"; };
+		27B956F6183437820076286F /* banner.expand.1-part.fullHtml.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "banner.expand.1-part.fullHtml.html"; sourceTree = "<group>"; };
+		27B956F7183437820076286F /* banner.expand.1-part.partialHtml.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "banner.expand.1-part.partialHtml.html"; sourceTree = "<group>"; };
+		27B956F8183437820076286F /* banner.expand.2-part.part1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "banner.expand.2-part.part1.html"; sourceTree = "<group>"; };
+		27B956F9183437820076286F /* banner.expand.2-part.part2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "banner.expand.2-part.part2.html"; sourceTree = "<group>"; };
+		27B956FA183437820076286F /* banner.fragment.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.fragment.html; sourceTree = "<group>"; };
+		27B956FB183437820076286F /* banner.getCurrentPosition.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getCurrentPosition.html; sourceTree = "<group>"; };
+		27B956FC183437820076286F /* banner.getDefaultPosition.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getDefaultPosition.html; sourceTree = "<group>"; };
+		27B956FD183437820076286F /* banner.getExpandProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getExpandProperties.html; sourceTree = "<group>"; };
+		27B956FE183437820076286F /* banner.getMaxSize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getMaxSize.html; sourceTree = "<group>"; };
+		27B956FF183437820076286F /* banner.getOrientationProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getOrientationProperties.html; sourceTree = "<group>"; };
+		27B95700183437820076286F /* banner.getPlacementType.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getPlacementType.html; sourceTree = "<group>"; };
+		27B95701183437820076286F /* banner.getResizeProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getResizeProperties.html; sourceTree = "<group>"; };
+		27B95702183437820076286F /* banner.getScreenSize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getScreenSize.html; sourceTree = "<group>"; };
+		27B95703183437820076286F /* banner.getStates.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getStates.html; sourceTree = "<group>"; };
+		27B95704183437820076286F /* banner.getStatesResize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getStatesResize.html; sourceTree = "<group>"; };
+		27B95705183437820076286F /* banner.getVersion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.getVersion.html; sourceTree = "<group>"; };
+		27B95706183437820076286F /* banner.isViewable.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.isViewable.html; sourceTree = "<group>"; };
+		27B95707183437820076286F /* banner.noMraidJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.noMraidJS.html; sourceTree = "<group>"; };
+		27B95708183437820076286F /* banner.noMraidJSFrag.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.noMraidJSFrag.html; sourceTree = "<group>"; };
+		27B95709183437820076286F /* banner.open.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.open.html; sourceTree = "<group>"; };
+		27B9570A183437820076286F /* banner.playInlineVideo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.playInlineVideo.html; sourceTree = "<group>"; };
+		27B9570B183437820076286F /* banner.playVideo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.playVideo.html; sourceTree = "<group>"; };
+		27B9570C183437820076286F /* banner.ready.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.ready.html; sourceTree = "<group>"; };
+		27B9570D183437820076286F /* banner.removeAllEventListeners.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.removeAllEventListeners.html; sourceTree = "<group>"; };
+		27B9570E183437820076286F /* banner.removeEventListener.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.removeEventListener.html; sourceTree = "<group>"; };
+		27B9570F183437820076286F /* banner.resize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.resize.html; sourceTree = "<group>"; };
+		27B95710183437820076286F /* banner.resizeExpand.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.resizeExpand.html; sourceTree = "<group>"; };
+		27B95711183437820076286F /* banner.sendSMS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.sendSMS.html; sourceTree = "<group>"; };
+		27B95712183437820076286F /* banner.setExpandProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.setExpandProperties.html; sourceTree = "<group>"; };
+		27B95713183437820076286F /* banner.setExpandPropertiesInvalid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.setExpandPropertiesInvalid.html; sourceTree = "<group>"; };
+		27B95714183437820076286F /* banner.setOrientationProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.setOrientationProperties.html; sourceTree = "<group>"; };
+		27B95715183437820076286F /* banner.setResizeProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.setResizeProperties.html; sourceTree = "<group>"; };
+		27B95716183437820076286F /* banner.simple.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.simple.html; sourceTree = "<group>"; };
+		27B95717183437820076286F /* banner.sizeChange.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.sizeChange.html; sourceTree = "<group>"; };
+		27B95718183437820076286F /* banner.stateChange.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.stateChange.html; sourceTree = "<group>"; };
+		27B95719183437820076286F /* banner.storePicture.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.storePicture.html; sourceTree = "<group>"; };
+		27B9571A183437820076286F /* banner.supports.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.supports.html; sourceTree = "<group>"; };
+		27B9571B183437820076286F /* banner.useCustomClose.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.useCustomClose.html; sourceTree = "<group>"; };
+		27B9571C183437820076286F /* banner.viewableChange.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.viewableChange.html; sourceTree = "<group>"; };
+		27B9571D183437820076286F /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		27B9571E183437820076286F /* interstitial.addEventListener.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.addEventListener.html; sourceTree = "<group>"; };
+		27B9571F183437820076286F /* interstitial.close.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.close.html; sourceTree = "<group>"; };
+		27B95720183437820076286F /* interstitial.createCalendarEvent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.createCalendarEvent.html; sourceTree = "<group>"; };
+		27B95721183437820076286F /* interstitial.error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.error.html; sourceTree = "<group>"; };
+		27B95722183437820076286F /* interstitial.fragment.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.fragment.html; sourceTree = "<group>"; };
+		27B95723183437820076286F /* interstitial.getCurrentPosition.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.getCurrentPosition.html; sourceTree = "<group>"; };
+		27B95724183437820076286F /* interstitial.getDefaultPosition.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.getDefaultPosition.html; sourceTree = "<group>"; };
+		27B95725183437820076286F /* interstitial.getMaxSize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.getMaxSize.html; sourceTree = "<group>"; };
+		27B95726183437820076286F /* interstitial.getOrientationProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.getOrientationProperties.html; sourceTree = "<group>"; };
+		27B95727183437820076286F /* interstitial.getScreenSize.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.getScreenSize.html; sourceTree = "<group>"; };
+		27B95728183437820076286F /* interstitial.getStates.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.getStates.html; sourceTree = "<group>"; };
+		27B95729183437820076286F /* interstitial.getVersion.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.getVersion.html; sourceTree = "<group>"; };
+		27B9572A183437820076286F /* interstitial.isViewable.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.isViewable.html; sourceTree = "<group>"; };
+		27B9572B183437820076286F /* interstitial.noMraidJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.noMraidJS.html; sourceTree = "<group>"; };
+		27B9572C183437820076286F /* interstitial.noMraidJSFrag.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.noMraidJSFrag.html; sourceTree = "<group>"; };
+		27B9572D183437820076286F /* interstitial.open.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.open.html; sourceTree = "<group>"; };
+		27B9572E183437820076286F /* interstitial.playInlineVideo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.playInlineVideo.html; sourceTree = "<group>"; };
+		27B9572F183437820076286F /* interstitial.playVideo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.playVideo.html; sourceTree = "<group>"; };
+		27B95730183437820076286F /* interstitial.ready.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.ready.html; sourceTree = "<group>"; };
+		27B95731183437820076286F /* interstitial.removeEventListener.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.removeEventListener.html; sourceTree = "<group>"; };
+		27B95732183437820076286F /* interstitial.setExpandPropertiesInvalid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.setExpandPropertiesInvalid.html; sourceTree = "<group>"; };
+		27B95733183437820076286F /* interstitial.setOrientationProperties.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.setOrientationProperties.html; sourceTree = "<group>"; };
+		27B95734183437820076286F /* interstitial.simple.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.simple.html; sourceTree = "<group>"; };
+		27B95735183437820076286F /* interstitial.sizeChange.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.sizeChange.html; sourceTree = "<group>"; };
+		27B95736183437820076286F /* interstitial.stateChange.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.stateChange.html; sourceTree = "<group>"; };
+		27B95737183437820076286F /* interstitial.storePicture.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.storePicture.html; sourceTree = "<group>"; };
+		27B95738183437820076286F /* interstitial.supports.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.supports.html; sourceTree = "<group>"; };
+		27B95739183437820076286F /* interstitial.telsms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.telsms.html; sourceTree = "<group>"; };
+		27B9573A183437820076286F /* interstitial.useCustomClose.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.useCustomClose.html; sourceTree = "<group>"; };
+		27B9573B183437820076286F /* interstitial.viewableChange.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interstitial.viewableChange.html; sourceTree = "<group>"; };
+		27B9573C183437820076286F /* nexage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = nexage.gif; sourceTree = "<group>"; };
+		953FF04B183AB2E200E146D2 /* SourceKitCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SourceKitCommon.xcodeproj; path = "../../../sourcekit-common-ios/src/SourceKitCommon.xcodeproj"; sourceTree = "<group>"; };
+		953FF051183AB31C00E146D2 /* SourceKitLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceKitLogger.h; path = "../../../../sourcekit-common-ios/src/SourceKit/SourceKitLogger.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27740FE417F2891C00EFFF39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953FF054183AB43300E146D2 /* libSourceKitCommon.a in Frameworks */,
+				27A462AD1815B38E008F7A5A /* libMRAID.a in Frameworks */,
+				27740FED17F2891C00EFFF39 /* CoreGraphics.framework in Frameworks */,
+				27740FEF17F2891C00EFFF39 /* UIKit.framework in Frameworks */,
+				27740FEB17F2891C00EFFF39 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		275B44901811B02900CFD076 /* Banner Tab */ = {
+			isa = PBXGroup;
+			children = (
+				27B95590183435F60076286F /* BannerAdListTVC.h */,
+				27B95591183435F60076286F /* BannerAdListTVC.m */,
+				27B95592183435F60076286F /* BannerViewController.h */,
+				27B95593183435F60076286F /* BannerViewController.m */,
+			);
+			name = "Banner Tab";
+			sourceTree = "<group>";
+		};
+		275B44911811B03900CFD076 /* Interstitial Tab */ = {
+			isa = PBXGroup;
+			children = (
+				27B95596183436030076286F /* InterstitialAdListTVC.h */,
+				27B95597183436030076286F /* InterstitialAdListTVC.m */,
+				27B95598183436030076286F /* InterstitialViewController.h */,
+				27B95599183436030076286F /* InterstitialViewController.m */,
+			);
+			name = "Interstitial Tab";
+			sourceTree = "<group>";
+		};
+		275E1E2418342CA200023552 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				953FF051183AB31C00E146D2 /* SourceKitLogger.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		275E1E2518342CAB00023552 /* MRAID */ = {
+			isa = PBXGroup;
+			children = (
+				2720898A1835172800394F9D /* MRAIDView.h */,
+				2720898B1835172800394F9D /* MRAIDInterstitial.h */,
+				2720898C1835172800394F9D /* MRAIDServiceDelegate.h */,
+			);
+			name = MRAID;
+			sourceTree = "<group>";
+		};
+		27689BF3182805E8005CFCDA /* About Tab */ = {
+			isa = PBXGroup;
+			children = (
+				27B9559C1834360F0076286F /* AboutViewController.h */,
+				27B9559D1834360F0076286F /* AboutViewController.m */,
+			);
+			name = "About Tab";
+			sourceTree = "<group>";
+		};
+		27740FDE17F2891C00EFFF39 = {
+			isa = PBXGroup;
+			children = (
+				953FF04B183AB2E200E146D2 /* SourceKitCommon.xcodeproj */,
+				278E62E61805AB4900A786B4 /* MRAID.xcodeproj */,
+				E248E2C317FA0E11003F4B8A /* MRAIDDemo */,
+				27740FE917F2891C00EFFF39 /* Frameworks */,
+				27740FE817F2891C00EFFF39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27740FE817F2891C00EFFF39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27740FE717F2891C00EFFF39 /* MRAIDDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27740FE917F2891C00EFFF39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27740FEA17F2891C00EFFF39 /* Foundation.framework */,
+				27740FEC17F2891C00EFFF39 /* CoreGraphics.framework */,
+				27740FEE17F2891C00EFFF39 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		278E62E71805AB4900A786B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278E62ED1805AB4900A786B4 /* libMRAID.a */,
+				27BBC1791833E9ED00074066 /* MRAID Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27A462BA1815B3B0008F7A5A /* SourceKit Imports */ = {
+			isa = PBXGroup;
+			children = (
+				275E1E2418342CA200023552 /* Common */,
+				275E1E2518342CAB00023552 /* MRAID */,
+			);
+			name = "SourceKit Imports";
+			sourceTree = "<group>";
+		};
+		27A70ECD17FA147900CE3109 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27B9559F1834361D0076286F /* Localizable.strings */,
+				27B955A11834362A0076286F /* Main.storyboard */,
+				27B955A21834362A0076286F /* MRAIDDemo-Prefix.pch */,
+				27B955A31834362A0076286F /* MRAIDDemo-Info.plist */,
+				27F3F96C1805F839005AC599 /* Images */,
+				27B955BC1834364C0076286F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27B956F0183437820076286F /* creatives */ = {
+			isa = PBXGroup;
+			children = (
+				27B9573C183437820076286F /* nexage.gif */,
+				27B9571D183437820076286F /* close.png */,
+				27B957891834378C0076286F /* Banner */,
+				27B9578A1834379B0076286F /* Interstitial */,
+			);
+			name = creatives;
+			path = ../../creatives;
+			sourceTree = "<group>";
+		};
+		27B957891834378C0076286F /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				27B956F1183437820076286F /* banner.addEventListener.html */,
+				27B956F2183437820076286F /* banner.callTel.html */,
+				27B956F3183437820076286F /* banner.close.html */,
+				27B956F4183437820076286F /* banner.createCalendarEvent.html */,
+				27B956F5183437820076286F /* banner.error.html */,
+				27B956F6183437820076286F /* banner.expand.1-part.fullHtml.html */,
+				27B956F7183437820076286F /* banner.expand.1-part.partialHtml.html */,
+				27B956F8183437820076286F /* banner.expand.2-part.part1.html */,
+				27B956F9183437820076286F /* banner.expand.2-part.part2.html */,
+				27B956FA183437820076286F /* banner.fragment.html */,
+				27B956FB183437820076286F /* banner.getCurrentPosition.html */,
+				27B956FC183437820076286F /* banner.getDefaultPosition.html */,
+				27B956FD183437820076286F /* banner.getExpandProperties.html */,
+				27B956FE183437820076286F /* banner.getMaxSize.html */,
+				27B956FF183437820076286F /* banner.getOrientationProperties.html */,
+				27B95700183437820076286F /* banner.getPlacementType.html */,
+				27B95701183437820076286F /* banner.getResizeProperties.html */,
+				27B95702183437820076286F /* banner.getScreenSize.html */,
+				27B95703183437820076286F /* banner.getStates.html */,
+				27B95704183437820076286F /* banner.getStatesResize.html */,
+				27B95705183437820076286F /* banner.getVersion.html */,
+				27B95706183437820076286F /* banner.isViewable.html */,
+				27B95707183437820076286F /* banner.noMraidJS.html */,
+				27B95708183437820076286F /* banner.noMraidJSFrag.html */,
+				27B95709183437820076286F /* banner.open.html */,
+				27B9570A183437820076286F /* banner.playInlineVideo.html */,
+				27B9570B183437820076286F /* banner.playVideo.html */,
+				27B9570C183437820076286F /* banner.ready.html */,
+				27B9570D183437820076286F /* banner.removeAllEventListeners.html */,
+				27B9570E183437820076286F /* banner.removeEventListener.html */,
+				27B9570F183437820076286F /* banner.resize.html */,
+				27B95710183437820076286F /* banner.resizeExpand.html */,
+				27B95711183437820076286F /* banner.sendSMS.html */,
+				27B95712183437820076286F /* banner.setExpandProperties.html */,
+				27B95713183437820076286F /* banner.setExpandPropertiesInvalid.html */,
+				27B95714183437820076286F /* banner.setOrientationProperties.html */,
+				27B95715183437820076286F /* banner.setResizeProperties.html */,
+				27B95716183437820076286F /* banner.simple.html */,
+				27B95717183437820076286F /* banner.sizeChange.html */,
+				27B95718183437820076286F /* banner.stateChange.html */,
+				27B95719183437820076286F /* banner.storePicture.html */,
+				27B9571A183437820076286F /* banner.supports.html */,
+				27B9571B183437820076286F /* banner.useCustomClose.html */,
+				27B9571C183437820076286F /* banner.viewableChange.html */,
+			);
+			name = Banner;
+			sourceTree = "<group>";
+		};
+		27B9578A1834379B0076286F /* Interstitial */ = {
+			isa = PBXGroup;
+			children = (
+				27B9571E183437820076286F /* interstitial.addEventListener.html */,
+				27B9571F183437820076286F /* interstitial.close.html */,
+				27B95720183437820076286F /* interstitial.createCalendarEvent.html */,
+				27B95721183437820076286F /* interstitial.error.html */,
+				27B95722183437820076286F /* interstitial.fragment.html */,
+				27B95723183437820076286F /* interstitial.getCurrentPosition.html */,
+				27B95724183437820076286F /* interstitial.getDefaultPosition.html */,
+				27B95725183437820076286F /* interstitial.getMaxSize.html */,
+				27B95726183437820076286F /* interstitial.getOrientationProperties.html */,
+				27B95727183437820076286F /* interstitial.getScreenSize.html */,
+				27B95728183437820076286F /* interstitial.getStates.html */,
+				27B95729183437820076286F /* interstitial.getVersion.html */,
+				27B9572A183437820076286F /* interstitial.isViewable.html */,
+				27B9572B183437820076286F /* interstitial.noMraidJS.html */,
+				27B9572C183437820076286F /* interstitial.noMraidJSFrag.html */,
+				27B9572D183437820076286F /* interstitial.open.html */,
+				27B9572E183437820076286F /* interstitial.playInlineVideo.html */,
+				27B9572F183437820076286F /* interstitial.playVideo.html */,
+				27B95730183437820076286F /* interstitial.ready.html */,
+				27B95731183437820076286F /* interstitial.removeEventListener.html */,
+				27B95732183437820076286F /* interstitial.setExpandPropertiesInvalid.html */,
+				27B95733183437820076286F /* interstitial.setOrientationProperties.html */,
+				27B95734183437820076286F /* interstitial.simple.html */,
+				27B95735183437820076286F /* interstitial.sizeChange.html */,
+				27B95736183437820076286F /* interstitial.stateChange.html */,
+				27B95737183437820076286F /* interstitial.storePicture.html */,
+				27B95738183437820076286F /* interstitial.supports.html */,
+				27B95739183437820076286F /* interstitial.telsms.html */,
+				27B9573A183437820076286F /* interstitial.useCustomClose.html */,
+				27B9573B183437820076286F /* interstitial.viewableChange.html */,
+			);
+			name = Interstitial;
+			sourceTree = "<group>";
+		};
+		27F3F96C1805F839005AC599 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				27B955A6183436410076286F /* seal.gif */,
+				27B955A7183436410076286F /* nexage.jpg */,
+				27B955A8183436410076286F /* about.png */,
+				27B955A9183436410076286F /* banner.png */,
+				27B955AA183436410076286F /* button.png */,
+				27B955AB183436410076286F /* Default-568h.png */,
+				27B955AC183436410076286F /* Default.png */,
+				27B955AD183436410076286F /* Default@2x.png */,
+				27B955AE183436410076286F /* icon.png */,
+				27B955AF183436410076286F /* icon@2x.png */,
+				27B955B0183436410076286F /* interstitials.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		953FF04C183AB2E200E146D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				953FF050183AB2E200E146D2 /* libSourceKitCommon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E248E2C317FA0E11003F4B8A /* MRAIDDemo */ = {
+			isa = PBXGroup;
+			children = (
+				27B956F0183437820076286F /* creatives */,
+				27B95589183435C90076286F /* AppDelegate.h */,
+				27B9558A183435C90076286F /* AppDelegate.m */,
+				27A462BA1815B3B0008F7A5A /* SourceKit Imports */,
+				275B44901811B02900CFD076 /* Banner Tab */,
+				275B44911811B03900CFD076 /* Interstitial Tab */,
+				27689BF3182805E8005CFCDA /* About Tab */,
+				27A70ECD17FA147900CE3109 /* Supporting Files */,
+			);
+			path = MRAIDDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27740FE617F2891C00EFFF39 /* MRAIDDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2774101C17F2891C00EFFF39 /* Build configuration list for PBXNativeTarget "MRAIDDemo" */;
+			buildPhases = (
+				27740FE317F2891C00EFFF39 /* Sources */,
+				27740FE417F2891C00EFFF39 /* Frameworks */,
+				27740FE517F2891C00EFFF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953FF053183AB42600E146D2 /* PBXTargetDependency */,
+				27A462AC1815B38A008F7A5A /* PBXTargetDependency */,
+			);
+			name = MRAIDDemo;
+			productName = "mmk-mraid-ios";
+			productReference = 27740FE717F2891C00EFFF39 /* MRAIDDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27740FDF17F2891C00EFFF39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Nexage;
+				TargetAttributes = {
+					27740FE617F2891C00EFFF39 = {
+						DevelopmentTeam = C3344Z88F6;
+					};
+				};
+			};
+			buildConfigurationList = 27740FE217F2891C00EFFF39 /* Build configuration list for PBXProject "MRAIDDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27740FDE17F2891C00EFFF39;
+			productRefGroup = 27740FE817F2891C00EFFF39 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 278E62E71805AB4900A786B4 /* Products */;
+					ProjectRef = 278E62E61805AB4900A786B4 /* MRAID.xcodeproj */;
+				},
+				{
+					ProductGroup = 953FF04C183AB2E200E146D2 /* Products */;
+					ProjectRef = 953FF04B183AB2E200E146D2 /* SourceKitCommon.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				27740FE617F2891C00EFFF39 /* MRAIDDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		278E62ED1805AB4900A786B4 /* libMRAID.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMRAID.a;
+			remoteRef = 278E62EC1805AB4900A786B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27BBC1791833E9ED00074066 /* MRAID Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "MRAID Tests.xctest";
+			remoteRef = 27BBC1781833E9ED00074066 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		953FF050183AB2E200E146D2 /* libSourceKitCommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSourceKitCommon.a;
+			remoteRef = 953FF04F183AB2E200E146D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27740FE517F2891C00EFFF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B95741183437820076286F /* banner.error.html in Resources */,
+				27B955B7183436410076286F /* Default.png in Resources */,
+				27B95774183437820076286F /* interstitial.getStates.html in Resources */,
+				27B95744183437820076286F /* banner.expand.2-part.part1.html in Resources */,
+				27B95788183437820076286F /* nexage.gif in Resources */,
+				27B95766183437820076286F /* banner.supports.html in Resources */,
+				27B9576A183437820076286F /* interstitial.addEventListener.html in Resources */,
+				27B9573F183437820076286F /* banner.close.html in Resources */,
+				27B95749183437820076286F /* banner.getExpandProperties.html in Resources */,
+				27B95765183437820076286F /* banner.storePicture.html in Resources */,
+				27B9577E183437820076286F /* interstitial.setExpandPropertiesInvalid.html in Resources */,
+				27B95743183437820076286F /* banner.expand.1-part.partialHtml.html in Resources */,
+				27B9576F183437820076286F /* interstitial.getCurrentPosition.html in Resources */,
+				27B95756183437820076286F /* banner.playInlineVideo.html in Resources */,
+				27B955B8183436410076286F /* Default@2x.png in Resources */,
+				27B95751183437820076286F /* banner.getVersion.html in Resources */,
+				27B955B5183436410076286F /* button.png in Resources */,
+				27B95773183437820076286F /* interstitial.getScreenSize.html in Resources */,
+				27B95767183437820076286F /* banner.useCustomClose.html in Resources */,
+				27B95747183437820076286F /* banner.getCurrentPosition.html in Resources */,
+				27B95780183437820076286F /* interstitial.simple.html in Resources */,
+				27B95764183437820076286F /* banner.stateChange.html in Resources */,
+				27B95778183437820076286F /* interstitial.noMraidJSFrag.html in Resources */,
+				27B95746183437820076286F /* banner.fragment.html in Resources */,
+				27B95776183437820076286F /* interstitial.isViewable.html in Resources */,
+				27B9574D183437820076286F /* banner.getResizeProperties.html in Resources */,
+				27B95770183437820076286F /* interstitial.getDefaultPosition.html in Resources */,
+				27B95753183437820076286F /* banner.noMraidJS.html in Resources */,
+				27B9575D183437820076286F /* banner.sendSMS.html in Resources */,
+				27B9577D183437820076286F /* interstitial.removeEventListener.html in Resources */,
+				27B95762183437820076286F /* banner.simple.html in Resources */,
+				27B95786183437820076286F /* interstitial.useCustomClose.html in Resources */,
+				27B95740183437820076286F /* banner.createCalendarEvent.html in Resources */,
+				27B955B1183436410076286F /* seal.gif in Resources */,
+				27B955A41834362A0076286F /* Main.storyboard in Resources */,
+				27B955B4183436410076286F /* banner.png in Resources */,
+				27B95768183437820076286F /* banner.viewableChange.html in Resources */,
+				27B95787183437820076286F /* interstitial.viewableChange.html in Resources */,
+				27B95754183437820076286F /* banner.noMraidJSFrag.html in Resources */,
+				27B9576E183437820076286F /* interstitial.fragment.html in Resources */,
+				27B9575F183437820076286F /* banner.setExpandPropertiesInvalid.html in Resources */,
+				27B9575A183437820076286F /* banner.removeEventListener.html in Resources */,
+				27B9576C183437820076286F /* interstitial.createCalendarEvent.html in Resources */,
+				27B95745183437820076286F /* banner.expand.2-part.part2.html in Resources */,
+				27B95781183437820076286F /* interstitial.sizeChange.html in Resources */,
+				27B95779183437820076286F /* interstitial.open.html in Resources */,
+				27B95758183437820076286F /* banner.ready.html in Resources */,
+				27B95742183437820076286F /* banner.expand.1-part.fullHtml.html in Resources */,
+				27B95757183437820076286F /* banner.playVideo.html in Resources */,
+				27B955BA183436410076286F /* icon@2x.png in Resources */,
+				27B95752183437820076286F /* banner.isViewable.html in Resources */,
+				2720898D1835172800394F9D /* MRAIDView.h in Resources */,
+				27B9574C183437820076286F /* banner.getPlacementType.html in Resources */,
+				27B955BB183436410076286F /* interstitials.png in Resources */,
+				27B955B2183436410076286F /* nexage.jpg in Resources */,
+				27B9577B183437820076286F /* interstitial.playVideo.html in Resources */,
+				27B9575E183437820076286F /* banner.setExpandProperties.html in Resources */,
+				2720898E1835172800394F9D /* MRAIDInterstitial.h in Resources */,
+				27B95763183437820076286F /* banner.sizeChange.html in Resources */,
+				27B95761183437820076286F /* banner.setResizeProperties.html in Resources */,
+				27B955B6183436410076286F /* Default-568h.png in Resources */,
+				27B95777183437820076286F /* interstitial.noMraidJS.html in Resources */,
+				27B9576B183437820076286F /* interstitial.close.html in Resources */,
+				27B95760183437820076286F /* banner.setOrientationProperties.html in Resources */,
+				27B9577F183437820076286F /* interstitial.setOrientationProperties.html in Resources */,
+				27B9573E183437820076286F /* banner.callTel.html in Resources */,
+				2720898F1835172800394F9D /* MRAIDServiceDelegate.h in Resources */,
+				27B9575B183437820076286F /* banner.resize.html in Resources */,
+				27B9574A183437820076286F /* banner.getMaxSize.html in Resources */,
+				27B9573D183437820076286F /* banner.addEventListener.html in Resources */,
+				27B95782183437820076286F /* interstitial.stateChange.html in Resources */,
+				27B955B9183436410076286F /* icon.png in Resources */,
+				27B95769183437820076286F /* close.png in Resources */,
+				27B9574E183437820076286F /* banner.getScreenSize.html in Resources */,
+				27B95784183437820076286F /* interstitial.supports.html in Resources */,
+				27B95775183437820076286F /* interstitial.getVersion.html in Resources */,
+				27B95772183437820076286F /* interstitial.getOrientationProperties.html in Resources */,
+				27B9576D183437820076286F /* interstitial.error.html in Resources */,
+				27B955A01834361D0076286F /* Localizable.strings in Resources */,
+				27B9577A183437820076286F /* interstitial.playInlineVideo.html in Resources */,
+				27B955B3183436410076286F /* about.png in Resources */,
+				27B95759183437820076286F /* banner.removeAllEventListeners.html in Resources */,
+				27B95771183437820076286F /* interstitial.getMaxSize.html in Resources */,
+				27B9577C183437820076286F /* interstitial.ready.html in Resources */,
+				27B95750183437820076286F /* banner.getStatesResize.html in Resources */,
+				27B9574F183437820076286F /* banner.getStates.html in Resources */,
+				27B9574B183437820076286F /* banner.getOrientationProperties.html in Resources */,
+				27B95785183437820076286F /* interstitial.telsms.html in Resources */,
+				27B95783183437820076286F /* interstitial.storePicture.html in Resources */,
+				27B95748183437820076286F /* banner.getDefaultPosition.html in Resources */,
+				27B95755183437820076286F /* banner.open.html in Resources */,
+				27B9575C183437820076286F /* banner.resizeExpand.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27740FE317F2891C00EFFF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B95594183435F60076286F /* BannerAdListTVC.m in Sources */,
+				27B9559E1834360F0076286F /* AboutViewController.m in Sources */,
+				27B9558B183435C90076286F /* AppDelegate.m in Sources */,
+				27B9559A183436030076286F /* InterstitialAdListTVC.m in Sources */,
+				27B95595183435F60076286F /* BannerViewController.m in Sources */,
+				27B955BD1834364C0076286F /* main.m in Sources */,
+				27B9559B183436030076286F /* InterstitialViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27A462AC1815B38A008F7A5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRAID;
+			targetProxy = 27A462AB1815B38A008F7A5A /* PBXContainerItemProxy */;
+		};
+		953FF053183AB42600E146D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SourceKitCommon;
+			targetProxy = 953FF052183AB42600E146D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2774101A17F2891C00EFFF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2774101B17F2891C00EFFF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2774101D17F2891C00EFFF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRAIDDemo/MRAIDDemo-Prefix.pch";
+				INFOPLIST_FILE = "MRAIDDemo/MRAIDDemo-Info.plist";
+				PRODUCT_NAME = MRAIDDemo;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2774101E17F2891C00EFFF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRAIDDemo/MRAIDDemo-Prefix.pch";
+				INFOPLIST_FILE = "MRAIDDemo/MRAIDDemo-Info.plist";
+				PRODUCT_NAME = MRAIDDemo;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27740FE217F2891C00EFFF39 /* Build configuration list for PBXProject "MRAIDDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2774101A17F2891C00EFFF39 /* Debug */,
+				2774101B17F2891C00EFFF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2774101C17F2891C00EFFF39 /* Build configuration list for PBXNativeTarget "MRAIDDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2774101D17F2891C00EFFF39 /* Debug */,
+				2774101E17F2891C00EFFF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27740FDF17F2891C00EFFF39 /* Project object */;
+}

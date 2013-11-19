@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta name='viewport' content='user-scalable=no initial-scale=1.0' />
+
+    <script src="mraid.js"></script>
+
+    <style type="text/css">
+
+        * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        background: transparent;
+        overflow:hidden;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -webkit-text-size-adjust: none;
+        }
+
+        html,body {
+        height: 100%;
+        margin: 0;
+        }
+
+        div {
+        width:100%;
+        min-height:100%;
+        text-align: center;
+        font-size: xx-large;
+        color: white;
+        }
+
+        .default {
+        background-color:silver;
+        }
+
+        .resized {
+        background-color:grey;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <script type="text/javascript">
+
+                var handleStateChange = function() {
+                    console.log("mraid state: " + mraid.getState());
+                    var ad = document.getElementById('ad');
+                    switch (mraid.getState()) {
+                        case "default":
+                        console.log("handleStateChange default");
+                        ad.setAttribute("class", "default");
+                        ad.innerHTML = 'Banner';
+                        break;
+                        case "resized":
+                        console.log("handleStateChanges, resized");
+                        ad.setAttribute("class", "resized");
+                        ad.innerHTML = 'Resized';
+                        break;
+                    }
+                }
+
+            mraid.addEventListener("stateChange", handleStateChange);
+
+            function myResize() {
+                console.log("start: myResize");
+                var properties = {
+                    width : 100,
+                    height : 200,
+                    customClosePosition : top-right,
+                    offsetX : 1,
+                    offsetY : 4,
+                    allowOffscreen : false
+                }
+
+                mraid.setResizeProperties(properties);
+                console.log("set resize properties");
+                mraid.resize();
+                console.log("end: myResize");
+            }
+
+    </script>
+
+    <div id='ad' class='default' onclick='myResize()'>
+        Banner
+    </div>
+
+</body>
+</html>

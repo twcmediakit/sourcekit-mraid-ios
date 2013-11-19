@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta name='viewport' content='user-scalable=no initial-scale=1.0' />
+        <script src="mraid.js"></script>
+    </head>
+    <body style="background-color:white;">
+        
+        <script type="text/javascript">
+            
+            function handleStateChange(state) {
+                console.log("mraid state: " + mraid.getState());
+            }
+        
+            function handleErrors(message, source) {
+                alert(source + ' generated an error message "' + message + '"');
+            }
+        
+            mraid.addEventListener("error", handleErrors);
+            mraid.addEventListener("", handleStateChange);
+        
+        </script>
+        
+        <div id='ad' style="text-align:center;">
+            <br/>
+            <br/>
+            Loading this will cause an error on JS side
+        </div>
+    </body>
+</html>

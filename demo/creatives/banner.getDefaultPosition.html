@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        Hello MRAID<br/>
+        <button type='button' onclick=clicked()>Get DefaultPosition</button>
+        
+        <script>
+            function clicked() {
+                var v = mraid.getDefaultPosition();
+                alert('printing default position \n' + v.x + ' x ' + v.y + '  ' + v.width + ' x ' + v.height);
+            }
+        </script>
+        
+    </body>
+</html>

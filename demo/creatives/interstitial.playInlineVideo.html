@@ -1,0 +1,27 @@
+<!-- MRAID play an inlineVideo -->
+<script type="application/javascript" src="mraid.js"></script>
+
+<!-- Setup Javascript -->
+<script language="javascript">
+    
+    mraid.addEventListener("error", handleErrorEvent);
+    
+    function handleErrorEvent(message, action) {
+        var msg = "MRAID ERROR";
+        if (action != null) {
+            msg += " caused by action '" + action + "',";
+        }
+        msg += " message: " + message;
+        console.log(msg);
+    }
+
+
+</script>
+
+<div style="width:99%">
+    <center>
+    <video  width="150" height="150" controls webkit-playsinline autoplay>
+        <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+    </video>
+    </center>
+</div>

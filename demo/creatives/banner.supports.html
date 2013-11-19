@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script>
+            mraid.addEventListener("ready", adReady);
+            
+            function adReady() {
+                var ad = document.getElementById('all');
+                var supported = " ";
+                var notSupported = " ";
+                if(mraid.supports("sms")) {
+                    supported = supported + "sms ";
+                } else {
+                    notSupported = notSupported + "sms ";
+                }
+                if(mraid.supports("tel")) {
+                    supported = supported + "tel ";
+                } else {
+                    notSupported = notSupported + "tel ";
+                }
+                if(mraid.supports("calendar")) {
+                    supported = supported + "calendar ";
+                } else {
+                    notSupported = notSupported + "calendar ";
+                }
+                if(mraid.supports("storePicture")) {
+                    supported = supported + "storePicture ";
+                } else {
+                    notSupported = notSupported + "storePicture ";
+                }
+                if(mraid.supports("inlineVideo")) {
+                    supported = supported + "inlineVideo ";
+                } else {
+                    notSupported = notSupported + "inlineVideo ";
+                }
+                ad.innerHTML = "<font size='2'>" + "Supported :" + supported + "<br/>" + "Not Supported :" + notSupported + "</font>";
+            }
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;" style="font-size:6px;">
+        <div id="all">Supports</div>
+    </body>
+</html>

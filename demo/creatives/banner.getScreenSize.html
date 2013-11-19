@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Nexage MRAID Ad to exercise getScreenSize</title>
+		
+		<script type="application/javascript" src="mraid.js"></script>
+		<script>
+			function screenSize() {
+	    		var size = mraid.getScreenSize();
+	    		alert(size.width + "," + size.height);
+            }
+        </script>
+	</head>
+	<body bgcolor="FF6600">
+		<button style="height:30px;width:90px;" onclick="screenSize();">getScreenSize</button>
+		
+	</body>
+</html>

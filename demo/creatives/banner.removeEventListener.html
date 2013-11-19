@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script language="javascript">
+            function handleStateChanged() {
+                alert('current state: ' + mraid.getState());
+            }
+        
+            mraid.addEventListener("stateChange", handleStateChanged);
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        Test MRAID removeEventListener<br/>
+        <button type='button' onclick='mraid.expand();'>Expand</button>
+        &nbsp;
+        <button type='button' onclick='mraid.removeEventListener("stateChange", handleStateChanged);'>Remove Listener</button>
+    </body>
+</html>

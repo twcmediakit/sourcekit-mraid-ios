@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Nexage MRAID Ad to exercise isViewable</title>
+		<script type="application/javascript" src="mraid.js"></script>
+		<script>
+            mraid.addEventListener('viewableChange', testViewable);
+            
+            function testViewable(){
+                setTimeout(isViewable,1000);
+            }
+            
+        	function isViewable() {
+  				var msg = "This ad is on the screen!";
+				var viewable = mraid.isViewable();
+				if (viewable) {
+                    alert(msg);
+		    	} else {
+                    alert("Ad off screen");
+                }
+            }
+		    </script>
+	</head>
+	<body bgcolor="FF6600">
+		<button style="height:30px;width:90px;" onclick="isViewable();">Test isViewable</button>
+	</body>
+</html>

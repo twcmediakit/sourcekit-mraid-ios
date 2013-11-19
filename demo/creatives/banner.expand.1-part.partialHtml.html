@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script>
+            
+            console.log("JS script loaded");
+            
+            function myExpand() {
+                console.log("about to expand");
+                mraid.expand();
+                console.log("expand complete");
+            }
+        
+        </script>
+    </head>
+    <body>
+        
+        <div onclick="myExpand()">
+            This is the 1-part that want to be expanded! Click to expand.
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        
+        <!-- Setup Javascript -->
+        <script language="javascript">
+            
+            mraid.addEventListener("error", handleErrorEvent);
+            
+            function handleErrorEvent(message, action) {
+                var msg = "MRAID ERROR";
+                if (action != null) {
+                    msg += " caused by action '" + action + "',";
+                }
+                msg += " message: " + message;
+                console.log(msg);
+            }
+        
+        function clicked() {
+            if (mraid.supports("sms")) {
+                window.location="sms:18005551212";
+            } else {
+                console.log("no support for sms");
+            }
+        }
+        
+        </script>
+    </head>
+    
+    <body style="width:99%; background-color:#FF6600;" >
+        <button style="height:30px;width:90px;"  type='button' onclick='clicked();'>Send SMS</button>
+    </body>
+    
+</html>

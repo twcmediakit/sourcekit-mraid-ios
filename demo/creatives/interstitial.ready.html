@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta name='viewport' content='user-scalable=no initial-scale=1.0' />
+        <script src="mraid.js"></script>
+    </head>
+    <body style="background-color:white;">
+        
+        <script type="text/javascript">
+            
+            mraid.addEventListener("ready", handleReadyState);
+            function handleReadyState()
+            {
+                var ad = document.getElementById('statelist');
+                ad.innerHTML = "Ad is in ready state";
+            }
+        
+        </script>
+        
+        <div id='ad' style="text-align:center;">
+            <br/>
+            <br/>
+            <h2>Ad showing the state change</h2>
+            <div id="statelist">
+                Unknown state
+            </div>
+        </div>
+        
+    </body>
+</html>

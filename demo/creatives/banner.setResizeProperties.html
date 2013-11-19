@@ -1,0 +1,122 @@
+
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        
+        <script language="javascript">
+            
+            mraid.addEventListener("error", handleErrorEvent);
+            
+            function handleErrorEvent(message, action) {
+                var msg = "Error";
+                if (action != null) {
+                    msg += " caused by action '" + action + "',";
+                }
+                msg += " message: " + message;
+                console.log(msg);
+            }
+        
+        var resizeProperties1 = {
+            "width": 220,
+            "height": 350,
+            "customClosePosition": 'top-right',
+            "offsetX": 50,
+            "offsetY": 50,
+            "allowOffscreen": true
+        };
+        
+        var resizeProperties2 = {
+            "width": 320,
+            "height": 450,
+            "customClosePosition": 'top-right',
+            "offsetX": 0,
+            "offsetY": 0,
+            "allowOffscreen": true
+        };
+        
+        function resize(resizeProperties) {
+            mraid.setResizeProperties(resizeProperties);
+            mraid.resize();
+            setButtonVisible(true);
+        }
+        
+        function closeFn() {
+            mraid.close();
+            setButtonVisible(false);
+        }
+        
+        function setButtonVisible(visible) {
+            var img = document.getElementById("closeButton");
+            img.style.visibility = (visible ? 'visible' : 'hidden');
+        }
+        
+        function toggleImgDisplay() {
+            
+            var resized = false;
+            var state = mraid.getState();
+            if(state == "resized") {
+                resized = true;
+            }
+            
+            var img = document.getElementById("closeRegion");
+            img.style.visibility = (resized ? 'visible' : 'hidden');
+            
+        }
+        
+        mraid.addEventListener('stateChange', toggleImgDisplay);
+        </script>
+        <style type="text/css">
+            img
+            {
+                position:absolute;
+                right:0px;
+                top:0px;
+            }
+        </style>
+    </head>
+    
+	<body align='center' style="background-color:silver;">
+        Test MRAID resize<br/>
+        <button type='button' id='resizeButton1' onclick='resize(resizeProperties1);'>Resize 1</button>
+        &nbsp;&nbsp;
+        <button type='button' id='resizeButton2' onclick='resize(resizeProperties2);'>Resize 2</button>
+        <img id="closeRegion" src="close.png" alt="close button" width="50" height="50" style="visibility:hidden">
+        <br>
+        <button type='button' id='closeButton' onclick='closeFn();' style="visibility:hidden">Close</button>
+        <br>
+        <br>
+        <div id="resized">
+            Resized Banner:
+            <br>
+            Resize Property 1
+            <br>
+            width: 220
+            <br>
+            height: 350
+            <br>
+            customClosePosition: top-right
+            <br>
+            offsetX: 50
+            <br>
+            offsetY: 50
+            <br>
+            allowOffscreen: true
+            <br>
+            Resized Banner:
+            <br>
+            Resize Property 2
+            <br>
+            width: 320
+            <br>
+            height: 450
+            <br>
+            customClosePosition: top-right
+            <br>
+            offsetX: 0
+            <br>
+            offsetY: 0
+            <br>
+            allowOffscreen: true
+        </div>
+    </body>
+</html>

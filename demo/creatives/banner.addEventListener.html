@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="mraid.js"></script>
+        <script language="javascript">
+            
+            if (mraid.getState() === 'loading') {
+                mraid.addEventListener('stateChange', handleStateChanged);
+                mraid.addEventListener('ready', showMyAd);
+            } else {
+                showMyAd();
+            }
+        
+            function showMyAd() {
+                alert('MRAID is ready');
+            }
+        
+            function handleStateChanged(state) {
+                alert('current state: ' + state);
+            }
+        </script>
+    </head>
+    <body align='center' style="background-color:silver;">
+        Test MRAID addEventListener() method
+        <button type='button' onclick='mraid.expand();'>Expand</button>
+    </body>
+</html>
