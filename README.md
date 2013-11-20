@@ -31,6 +31,12 @@ Step 2: Import these header file(s) into your project:
 	#import "MRAIDView.h"
 	#import "MRAIDInterstitial.h"
 	#import "MRAIDServiceDelegate.h"
+	
+Edit Build Phases under target<br/>
+
+	Target Dependencies - Add MRAID & SourceKitCommon projects
+	Link Binary with Libraries - Add libMRAID.a & libSourceKitCommon.a
+
 
 Step 3: Create an MRAIDView and add it to your container view, as in this example:
 
