@@ -15,6 +15,7 @@
 {
     // Set SourceKit Logging
     [SourceKitLogger setLogLevel:SourceKitLogLevelDebug];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     
     return YES;
 }

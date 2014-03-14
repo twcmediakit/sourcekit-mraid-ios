@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Nexage, Inc. All rights reserved.
 //
 
-#define kKitVersion 1.0
+#define kKitVersion @"1.0.1"
 
 static NSString* MRAIDSupportsSMS = @"sms";
 static NSString* MRAIDSupportsTel = @"tel";

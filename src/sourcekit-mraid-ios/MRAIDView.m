@@ -19,7 +19,7 @@
 #import "mraidjs.h"
 #import "CloseButton.h"
 
-#define kDefaultCloseButtonSize 50
+#define kCloseEventRegionSize 50
 
 typedef enum {
     MRAIDStateLoading,
@@ -57,7 +57,7 @@ typedef enum {
     UIWebView *webViewPart2;
     UIWebView *currentWebView;
     
-    UIButton *defaultCloseButton;
+    UIButton *closeEventRegion;
     
     UIView *resizeView;
     UIButton *resizeCloseRegion;
@@ -71,9 +71,7 @@ typedef enum {
 
 - (void)deviceOrientationDidChange:(NSNotification *)notification;
 
-- (void)showDefaultCloseButton;
-- (void)removeDefaultCloseButton;
-
+- (void)addCloseEventRegion;
 - (void)showResizeCloseRegion;
 - (void)removeResizeCloseRegion;
 - (void)setResizeViewPosition;
@@ -329,9 +327,8 @@ typedef enum {
     }
     
     if (modalVC) {
-        if (!useCustomClose) {
-            [self removeDefaultCloseButton];
-        }
+        [closeEventRegion removeFromSuperview];
+        closeEventRegion = nil;
         [currentWebView removeFromSuperview];
         if ([modalVC respondsToSelector:@selector(dismissViewControllerAnimated:completion:)]) {
             // used if running >= iOS 6
@@ -472,9 +469,8 @@ typedef enum {
     
     [modalVC.view addSubview:currentWebView];
     
-    if (!useCustomClose) {
-        [self showDefaultCloseButton];
-    }
+    // always include the close event region
+    [self addCloseEventRegion];
     
     if ([self.rootViewController respondsToSelector:@selector(presentViewController:animated:completion:)]) {
         // used if running >= iOS 6
@@ -605,44 +601,39 @@ typedef enum {
 
 // These methods are helper methods for the ones above.
 
-- (void)showDefaultCloseButton
+- (void)addCloseEventRegion
 {
-    defaultCloseButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    defaultCloseButton.backgroundColor = [UIColor clearColor];
-    [defaultCloseButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    closeEventRegion = [UIButton buttonWithType:UIButtonTypeCustom];
+    closeEventRegion.backgroundColor = [UIColor clearColor];
+    [closeEventRegion addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     
-    // get button image from header file
-    NSData* buttonData = [NSData dataWithBytesNoCopy:__sourcekit_mraid_ios_CloseButton_png
-                                              length:__sourcekit_mraid_ios_CloseButton_png_len
-                                        freeWhenDone:NO];
-    UIImage *closeButtonImage = [UIImage imageWithData:buttonData];
-    [defaultCloseButton setBackgroundImage:closeButtonImage forState:UIControlStateNormal];
-    defaultCloseButton.frame = CGRectMake(0, 0, kDefaultCloseButtonSize, kDefaultCloseButtonSize);
-    CGRect frame = defaultCloseButton.frame;
+    if (!useCustomClose) {
+        // get button image from header file
+        NSData* buttonData = [NSData dataWithBytesNoCopy:__sourcekit_mraid_ios_CloseButton_png
+                                                  length:__sourcekit_mraid_ios_CloseButton_png_len
+                                            freeWhenDone:NO];
+        UIImage *closeButtonImage = [UIImage imageWithData:buttonData];
+        [closeEventRegion setBackgroundImage:closeButtonImage forState:UIControlStateNormal];
+    }
+    
+    closeEventRegion.frame = CGRectMake(0, 0, kCloseEventRegionSize, kCloseEventRegionSize);
+    CGRect frame = closeEventRegion.frame;
     
     // align on top right
     int x = CGRectGetWidth(modalVC.view.frame) - CGRectGetWidth(frame);
     frame.origin = CGPointMake(x, 0);
-    defaultCloseButton.frame = frame;
+    closeEventRegion.frame = frame;
     // autoresizing so it stays at top right (flexible left and flexible bottom margin)
-    defaultCloseButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
+    closeEventRegion.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
     
-    [modalVC.view addSubview:defaultCloseButton];
-}
-
-- (void)removeDefaultCloseButton
-{
-    if (defaultCloseButton) {
-        [defaultCloseButton removeFromSuperview];
-        defaultCloseButton = nil;
-    }
+    [modalVC.view addSubview:closeEventRegion];
 }
 
 - (void)showResizeCloseRegion
 {
     if (!resizeCloseRegion) {
         resizeCloseRegion = [UIButton buttonWithType:UIButtonTypeCustom];
-        resizeCloseRegion.frame = CGRectMake(0, 0, kDefaultCloseButtonSize, kDefaultCloseButtonSize);
+        resizeCloseRegion.frame = CGRectMake(0, 0, kCloseEventRegionSize, kCloseEventRegionSize);
         resizeCloseRegion.backgroundColor = [UIColor clearColor];
         [resizeCloseRegion addTarget:self action:@selector(closeFromResize) forControlEvents:UIControlEventTouchUpInside];
         [resizeView addSubview:resizeCloseRegion];

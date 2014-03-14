@@ -2,15 +2,23 @@
 	<head>
         <script type="mraid.js"></script>
         <script type="text/javascript">
-            
-            function expand() {
-                mraid.expand();
-                setImageVisible(true);
-            }
+ 
+        function expand() {
+            mraid.addEventListener('stateChange', handleStateChanged);
+            mraid.useCustomClose(true);
+            setImageVisible(true);
+            mraid.expand();
+        }
         
         function closeFn() {
-            mraid.close();
             setImageVisible(false);
+            mraid.close();
+        }
+        
+        function handleStateChanged(state) {
+          if (state == 'default') {
+               setImageVisible(false);
+           }
         }
         
         function setImageVisible(visible) {
@@ -18,14 +26,14 @@
             img.style.visibility = (visible ? 'visible' : 'hidden');
         }
         
-        mraid.useCustomClose(true);
-            </script>
+        </script>
+        
         <style type="text/css">
             img
             {
                 position:absolute;
-                right:10px;
-                top:10px;
+                left:10px;
+                top:14px;
             }
         </style>
 	</head>
@@ -33,6 +41,6 @@
         Test MRAID useCustomClose<br/>
         <button type='button' onclick='expand();'>Expand</button>
         <br>
-        <img id="closeButton" src="close.png" alt="close button" width="42" height="42" onclick="closeFn();" style="visibility:hidden">
+        <div id="closeButton" alt="close button" style="visibility:hidden" style="float:right; padding:2px;" onclick='closeFn();'><img src="close.png"  width="38" height="38" /></div>
     </body>
 </html>
